@@ -1,0 +1,5 @@
+compare_exchange_strong：atomic库中的一个函数，入参是3个，expect，desire，memoryorder，意思是如果当前的变
+量this的值==expect值，则将this值改为desire，并返回true，否则，返回false，不进行修改，即进行一个读的操作。通常用于例如线程B等待线程A执行
+完毕，或者执行到某个步骤。此时线程B可以进行while等待，线程A在执行到对应步骤，将对应的原子变量置为expect值即可。类似于“接力运动”。这里由于会
+进行读写操作，所以，memory order一般是acq rel，而A线程由于要保证都执行完
+毕，执行顺序没有关系，所以一般是Release的memory order。
