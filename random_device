@@ -1,0 +1,4 @@
+random_device
+
+标准库提供了一个非确定性随机数生成设备.在Linux的实现中,是读取/dev/urandom设备;Windows的实现居然是用rand_s,在这里强烈谴责一下.
+random_device提供()操作符,用来返回一个min()到max()之间的一个数字.如果是Linux(Unix Like或者Unix)下,都可以使用这个来产生高质量的随机数,可以理解为真随机数.
