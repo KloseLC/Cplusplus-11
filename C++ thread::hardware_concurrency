@@ -1,0 +1,27 @@
+C++ thread::hardware_concurrency 获取硬件支持并发数
+
+
+一、功能
+获取硬件支持的并发线程数
+
+二、返回值
+正常返回支持的并发线程数，若值非良定义或不可计算，则返回 ​0​
+
+三、形参
+无
+
+四、示例
+#include <iostream>
+#include <thread>
+ 
+int main()
+{
+    unsigned int in = std::thread::hardware_concurrency();
+ 
+    std::cout << in << std::endl;
+}
+
+
+
+
+一个没什么用的接口
