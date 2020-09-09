@@ -1,0 +1,9 @@
+C++ 11  简单的原子bool变量 
+
+test_and_set() 函数检查 std::atomic_flag 标志，如果 std::atomic_flag 之前没有被设置过，则设置 std::atomic_flag 的标志，并返回先前该 std::atomic_flag 对象是否被设置过，如果之前 std::atomic_flag 对象已被设置，则返回 true，否则返回 false。
+
+
+
+
+std::atomic_flag::clear() 介绍
+清除 std::atomic_flag 对象的标志位，即设置 atomic_flag 的值为 false。clear 函数原型如下：
